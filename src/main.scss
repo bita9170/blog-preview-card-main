@@ -1,0 +1,26 @@
+:root {
+  --ff-sans: "Outfit","Figtree", sans-serif;
+
+  --fs-600: 0.938rem;
+  --fs-800: 1rem;
+
+  --fw-light: 400;
+  --fw-bold: 700;
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-Grey: hsl(0, 0%, 50%);
+  --clr-Black: hsl(0, 0%, 7%);
+  --clr-Yellow: hsl(47, 88%, 63%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+}
