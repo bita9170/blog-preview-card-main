@@ -1,5 +1,5 @@
 :root {
-  --ff-sans: "Outfit","Figtree", sans-serif;
+  --ff-sans: "Outfit", "Figtree", sans-serif;
 
   --fs-600: 0.938rem;
   --fs-800: 1rem;
@@ -20,7 +20,50 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-600);
+  background-color: var(--clr-Yellow);
 
+  main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    div {
+      background-color: var(--clr-white);
+      width: 100%;
+      max-width: 375px; //mobile
+      border-radius: 1.5rem;
+      padding: 20px;
+
+    img,
+    svg {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 1rem;
+    }
+    button {
+      background-color: var(--clr-Yellow);
+      padding: 10px;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      border: none;
+    }
+
+  }
+  }
+
+
+  
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    div {
+      max-width: 1440px; //desktop
+    }
+  }
 }
