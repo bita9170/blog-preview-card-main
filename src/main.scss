@@ -4,19 +4,13 @@
   --fs-600: 0.938rem;
   --fs-800: 1rem;
 
-  --fw-light: 400;
-  --fw-bold: 700;
+  --fw-light: 600;
+  --fw-bold: 800;
 
   --clr-white: hsl(0, 0%, 100%);
   --clr-Grey: hsl(0, 0%, 50%);
   --clr-Black: hsl(0, 0%, 7%);
   --clr-Yellow: hsl(47, 88%, 63%);
-}
-
-body {
-  font-family: var(--ff-sans);
-  font-size: var(--fs-600);
-  background-color: var(--clr-Yellow);
 }
 
 *,
@@ -27,41 +21,77 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-600);
+  background-color: var(--clr-Yellow);
+  line-height: 1.5; /* افزودن فاصله بین خطوط */
+}
+
 main {
   display: grid;
   place-items: center;
   height: 100vh;
   width: 100vw;
+  overflow-y: scroll;
 
   div {
     background-color: var(--clr-white);
     width: 100%;
-    max-width: 375px; //mobile
+    max-width: 375px;
+    border: solid 1px;
     border-radius: 1.5rem;
     padding: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
 
     img,
     svg {
       max-width: 100%;
       height: auto;
-      margin: 0 auto;
+      margin: 20px auto;
       border-radius: 1rem;
-      align-items: flex-start;
     }
+
     button {
       background-color: var(--clr-Yellow);
       padding: 10px;
-      font-weight: 600;
-      border-radius: 0.5rem;
+      font-weight: var(--fw-bold);
+      margin-bottom: 10px;
+      border-radius: 0.3rem;
       border: none;
+    }
+    p {
+      font-size: 16px;
+      font-weight: var(--fw-light);
+
+      &:nth-of-type(2) {
+        color: var(--clr-Grey);
+      }
+      
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 10px;
+    }
+    footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: var(--clr-Black);
+
+      img {
+        margin: 0 10px;
+        width: 10%;
+      }
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   main {
-    div {
-      max-width: 1440px; //desktop
-    }
+    overflow: hidden;
   }
 }
