@@ -9,6 +9,6 @@ export default defineConfig({
     'react/jsx-runtime': 'preact/compat/jsx-runtime',
   },
 
-  base: "/Blog-preview-card-main/",
+  base: "/blog-preview-card-main/",
   plugins: [react()],
 });
